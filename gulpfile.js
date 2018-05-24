@@ -22,9 +22,9 @@ gulp.task('build-update', function() {
                 fs.copyFileSync('./blank.svg', `./${version}/update.svg`);
                 fs.copyFileSync('./update.svg', `./${lastVersion}/update.svg`);
                 fs.writeFileSync('./LASTVER', version);
-                gulp.src('./*')
-                    .pipe(git.add());
-                git.commit(`Update to ${version} from ${lastVersion}`, {args: '-S'});
+                gulp.src(['./**/*.svg', './LASTVER'])
+                    .pipe(git.add())
+                    .pipe(git.commit(`Update to ${version} from ${lastVersion}`));
             }
             else {
                 console.log(`Already on ${version}`);
