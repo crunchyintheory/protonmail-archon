@@ -25,12 +25,11 @@ gulp.task('build-update', function() {
                 gulp.src('./*')
                     .pipe(git.add());
                 git.commit(`Update to ${version} from ${lastVersion}`, {args: '-S'});
-                git.checkout('master');
             }
             else {
-                git.checkout('master');
                 console.log(`Already on ${version}`);
             }
+            git.checkout('master');
         }
     });
 });
