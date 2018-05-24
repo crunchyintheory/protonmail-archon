@@ -1,3 +1,13 @@
 @if $showUpdateIndicator == 1 {
+    $image: 'https://projects.crunchyintheory.com/protonmail-archon/' + $version + '/update.svg';
     
+    ul.navigation::before {
+        background-image:       url($image);
+        max-width:              150px;
+        width:                  100%;
+        content:                ' ';
+        background-repeat:      no-repeat;
+        height:                 100%;
+        background-position:    right center;
+    }
 }
