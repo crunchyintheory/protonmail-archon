@@ -1,0 +1,17 @@
+.bodyDecrypted.plain {
+    font-family: 'Open Sans', sans-serif;
+}
+a.headerDesktop-logo::after {
+    @if $switchPlanPlaceholder == 1 {
+        color: $primary-light !important;
+        content: $planText !important;
+    }
+}
+#ptSidebar, 
+a.headerDesktop-logo {
+    background-color: $header-dark !important;
+}
+header.headerSecured-container, 
+.composeHeader-container {
+    background-color: $header-light !important;
+}

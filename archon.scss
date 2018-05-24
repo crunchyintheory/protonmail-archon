@@ -22,5 +22,8 @@ $planText: 'Archon';
 
 //(More config settings will be added in later releases)
 @import 'colors';
-@import 'update';
-@import 'main';
+@import 'imports/update';
+@import 'imports/header';
+@import 'imports/recolor';
+
+@import 'custom';

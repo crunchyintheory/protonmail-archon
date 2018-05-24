@@ -1,11 +1,18 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const git = require('gulp-git');
+const minify = require('gulp-minify-css');
+const rename = require('gulp-rename');
 const fs = require('fs');
 
 gulp.task('sass', function() {
-    return gulp.src('./archon.scss')
-        .pipe(sass().on('error', sass.logError))
+    var css = gulp.src('./archon.scss')
+        .pipe(sass().on('error', sass.logError));
+    css.pipe(gulp.dest('./dist'));
+    return css.pipe(minify())
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(gulp.dest('./dist'));
 });
 
