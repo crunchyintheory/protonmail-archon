@@ -1,0 +1,41 @@
+.bodyDecrypted.plain {
+    font-family: 'Open Sans', sans-serif;
+}
+a.headerDesktop-logo::after {
+    @if $switchPlanPlaceholder == 1 {
+        color: $primary-light !important;
+        content: $planText !important;
+    }
+}
+#ptSidebar, a.headerDesktop-logo {
+    background-color: $header-dark !important;
+}
+header.headerSecured-container, .composeHeader-container {
+    background-color: $header-light !important;
+}
+.pm_button.primary, .pm_toggle.on .on, .pm_toggle.off .off, .sidebarApp-container .sidebar-btn-compose, .storageBar .storageBar-progress, .conversationPlaceholder #storageStatus .wrap span strong, .squire-popover [class*=-footer] [class*=-btn-], .customCheckbox-input:checked+.customCheckbox-mask {
+    background-color: $primary !important;
+    border-color: $primary;
+}
+.pm_button.primary:hover, .pm_button.primary:focus, .sidebarApp-container .sidebar-btn-compose:hover, .pm_modal .modal-dialog .close, .pm_badge.primary {
+    background-color: $primary-dark !important;
+}
+.alert.alert-info {
+    background-color: rgba($primary, .2);
+    color: $primary-dark;
+}
+.sidebarApp-item.active .navigationItem-icon, .sidebarApp-container .footer div.link a, .sidebarApp-container .footer div.storage strong, .contactItem-actions>button, .pm_button.link, html.protonmail .text-purple {
+    color: $primary !important;
+}
+.protonLoader .protonLoaderIcon svg path {
+    fill: $primary !important;
+}
+.protonLoader::after {
+    border-top-color: $primary;
+}
+.navigation>li.active, .navigation>li:hover, .pm_modal .modal-dialog, .customRadio-input:checked+.customRadio-mask {
+    border-color: $primary;
+}
+.customRadio-input:checked+.customRadio-mask {
+    box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 10px $primary;
+}

@@ -4,13 +4,13 @@ const git = require('gulp-git');
 const fs = require('fs');
 
 gulp.task('sass', function() {
-    return gulp.src('./*.scss')
+    return gulp.src('./archon.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('build-update', function() {
-    const config = fs.readFileSync('./_config.scss',{encoding: 'utf8'});
+    const config = fs.readFileSync('./archon.scss',{encoding: 'utf8'});
     const version = config.match(/\$version: '(.+)';/)[1];
     console.log(`Building output for ${version}`);
     git.checkout('gh-pages', (err) => {
