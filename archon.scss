@@ -1,0 +1,39 @@
+.bodyDecrypted.plain {
+    font-family: 'Open Sans', sans-serif;
+}
+a.headerDesktop-logo::after {
+    color: #6ddcfb !important;
+    content: 'Archon' !important;
+}
+#ptSidebar, a.headerDesktop-logo {
+    background-color: #262626 !important;
+}
+header.headerSecured-container, .composeHeader-container {
+    background-color: #333 !important;
+}
+.pm_button.primary, .pm_toggle.on .on, .pm_toggle.off .off, .sidebarApp-container .sidebar-btn-compose, .storageBar .storageBar-progress, .conversationPlaceholder #storageStatus .wrap span strong, .squire-popover [class*=-footer] [class*=-btn-], .customCheckbox-input:checked+.customCheckbox-mask {
+    background-color: rgb(92, 174, 195) !important;
+    border-color: rgb(92, 174, 195);
+}
+.pm_button.primary:hover, .pm_button.primary:focus, .sidebarApp-container .sidebar-btn-compose:hover, .pm_modal .modal-dialog .close, .pm_badge.primary {
+    background-color: rgb(56, 133, 152) !important;
+}
+.alert.alert-info {
+    background-color: rgba(92, 174, 195, .2);
+    color: rgb(56, 133, 152);
+}
+.sidebarApp-item.active .navigationItem-icon, .sidebarApp-container .footer div.link a, .sidebarApp-container .footer div.storage strong, .contactItem-actions>button, .pm_button.link, html.protonmail .text-purple {
+    color: rgb(92, 174, 195) !important;
+}
+.protonLoader .protonLoaderIcon svg path {
+    fill: rgb(92, 174, 195) !important;
+}
+.protonLoader::after {
+    border-top-color: rgb(92, 174, 195);
+}
+.navigation>li.active, .navigation>li:hover, .pm_modal .modal-dialog, .customRadio-input:checked+.customRadio-mask {
+    border-color: rgb(92, 174, 195);
+}
+.customRadio-input:checked+.customRadio-mask {
+    box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 10px rgb(92, 174, 195);
+}
