@@ -9,6 +9,12 @@
 *
 */
 
+$version: 'v0.1';
+
+//Determines whether the update indicator should be shown if updates
+// are available
+$showUpdateIndicator: 1;
+
 //Determines whether the text under the "ProtonMail" logo at the top
 // should be switched to say $planText. If so, it will use $primary-light
 $switchPlanPlaceholder: 1;

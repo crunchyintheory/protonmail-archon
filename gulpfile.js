@@ -1,10 +1,38 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const git = require('gulp-git');
+const fs = require('fs');
 
 gulp.task('sass', function() {
     return gulp.src('./*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('build-update', function() {
+    const config = fs.readFileSync('./_config.scss',{encoding: 'utf8'});
+    const version = config.match(/\$version: '(.+)';/)[1];
+    console.log(`Building output for ${version}`);
+    git.checkout('gh-pages', (err) => {
+        if(err) console.error(err);
+        else {
+            const lastVersion = fs.readFileSync('./LASTVER',{encoding: 'utf8'});
+            if(lastVersion != version) {
+                fs.mkdirSync(`./${version}`);
+                fs.copyFileSync('./blank.svg', `./${version}/update.svg`);
+                fs.copyFileSync('./update.svg', `./${lastVersion}/update.svg`);
+                fs.writeFileSync('./LASTVER', version);
+                gulp.src('./*')
+                    .pipe(git.add());
+                git.commit(`Update to ${version} from ${lastVersion}`, {args: '-S'});
+                git.checkout('master');
+            }
+            else {
+                git.checkout('master');
+                console.log(`Already on ${version}`);
+            }
+        }
+    });
 });
 
 gulp.task('default', ['sass']);
