@@ -5,7 +5,8 @@
 .storageBar .storageBar-progress,
 .conversationPlaceholder #storageStatus .wrap span strong,
 .squire-popover [class*=-footer] [class*=-btn-],
-.customCheckbox-input:checked+.customCheckbox-mask {
+.customCheckbox-input:checked+.customCheckbox-mask,
+.conversation.marked:before {
     background-color: $primary !important;
 }
 
@@ -14,15 +15,42 @@
 .sidebarApp-container .sidebar-btn-compose:hover, 
 .pm_modal .modal-dialog .close, 
 .pm_badge.primary {
-    background-color: $primary !important;
+    background-color: $primary-dark !important;
 }
 
 .pm_button.primary,
 .navigation>li.active,
 .navigation>li:hover,
 .pm_modal .modal-dialog,
-.customRadio-input:checked+.customRadio-mask {
+.customRadio-input:checked+.customRadio-mask,
+.sidebarApp-container .sidebar-btn-compose,
+.pm_button,
+.pm_buttons,
+.pm_buttons a,
+.customMaskInput-mask,
+.pm_form input[type=email]:focus, 
+.pm_form input[type=number]:focus, 
+.pm_form input[type=password]:focus, 
+.pm_form input[type=search]:focus, 
+.pm_form input[type=tel]:focus, 
+.pm_form input[type=text]:focus, 
+.pm_form input[type=url]:focus, 
+.pm_form select:focus, 
+.pm_form textarea:focus,
+.pm_dropdown>a, 
+.pm_dropdown>button, 
+.pm_dropdown>ul>li,
+.pm_dropdown,
+#conversation-view header,
+#conversation-view .message,
+.conversation,
+.scrollbox-container {
     border-color: $primary !important;
+}
+
+.conversationPlaceholder header,
+.pm_toggle span.knob, {
+    border-color: $primary-dark;
 }
 
 .sidebarApp-item.active .navigationItem-icon,
@@ -30,7 +58,13 @@
 .sidebarApp-container .footer div.storage strong, 
 .contactItem-actions>button, 
 .pm_button.link,
-html.protonmail .text-purple {
+html.protonmail .text-purple,
+.messageExtra-container>[class*=-container] a,
+#conversation-view .message .toggleDetails,
+#conversation-view .message .message-contact-sender,
+i.fa.fa-search,
+div[class*=dropdown-label-] button,
+div[class*=dropdown-folder-] button {
     color: $primary !important;
 }
 
@@ -44,7 +78,17 @@ html.protonmail .text-purple {
 .customRadio-input:checked+.customRadio-mask {
     box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 10px $primary;
 }
+.pm_toggle {
+    box-shadow: 0 0 0 1px $primary;
+}
 .alert.alert-info {
     background-color: rgba($primary, .2);
     color: $primary-dark;
+}
+.pm_form select:active, 
+.pm_form select:focus {
+    box-shadow: inset 0 0 0 1px $primary;
+}
+.pm_form .pm_select {
+    box-shadow: inset 0 0 0 1px $primary-dark, 0 1px 2px rgba(0,0,0,.1);
 }

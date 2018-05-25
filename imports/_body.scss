@@ -1,0 +1,99 @@
+@if $recolor-body == 1 {
+body #pm_main, .messagePlaceholder,
+.pm_buttons,
+.conversationPlaceholder header,
+.pm_button,
+.pm_button:focus,
+.pm_button:hover,
+.pm_form input[type=email],
+.pm_form input[type=number], 
+.pm_form input[type=password], 
+.pm_form input[type=search], 
+.pm_form input[type=tel], 
+.pm_form input[type=text], 
+.pm_form input[type=url], 
+.pm_form select, 
+.pm_form textarea,
+.pm_form .pm_select .fa,
+.pm_buttons .fa.fa-angle-down,
+.pm_buttons a,
+.pm_dropdown>button:hover,
+.messageExtra-container>[class*=-container],
+#conversation-view header h1 {
+    color: $body-text !important;
+}
+
+body #pm_main,
+.customMaskInput-mask,
+option,
+.pm_dropdown>button,
+.conversation,
+.pm_dropdown,
+.scrollbox-container {
+    background-color: $body-background !important;
+}
+
+.pm_buttons a,
+.pm_buttons .pm_buttons-child,
+.pm_toggle,
+.pm_toggle span.knob,
+.pm_button:focus,
+.pm_button:hover,
+div.pm_dropdown>button:hover,
+.conversation.read,
+#conversation-view .message .details,
+#conversation-view .message .summary,
+#conversation-view .message .summary .time,
+#conversation-view .message .summary .status,
+.messageExtra-container>[class*=-container]>[class*=-button]:hover,
+ {
+    background-color: $body-supplementary-light !important;
+}
+
+.messageExtra-container>[class*=-container],
+.pm_buttons .pm_buttons-child:focus, 
+.pm_buttons .pm_buttons-child:hover,
+.pm_buttons a:focus,
+.pm_buttons a:hover,
+.messageExtra-container>[class*=-container]>[class*=-button] {
+    background-color: $body-supplementary !important;
+}
+
+.pm_buttons .disabled,
+.pm_buttons.disabled>a,
+.paginator-disabled-main .paginator-dropdown, 
+.paginator-disabled-next .paginator-btn-next, 
+.paginator-disabled-previous .paginator-btn-previous {
+    box-shadow: none !important;
+}
+
+//One-offs
+.pm_toolbar {
+    box-shadow: inset 0 -1px 0 $primary-dark;
+}
+.customRadio-input:checked+.customRadio-mask {
+    box-shadow: inset 0 0 0 3px $body-background, inset 0 0 0 10px $primary;
+}
+.pm_buttons .pm_buttons-child:focus, 
+.pm_buttons .pm_buttons-child:hover,
+.pm_buttons a:focus,
+.pm_buttons a:hover {
+    color: rgb(255, 255, 255);
+}
+.pm_buttons .disabled,
+.pm_buttons.disabled>a,
+.pm_buttons.disabled>a .fa.fa-angle-down,
+.pm_buttons .disabled .fa.fa-angle-down {
+    color: $primary-dark !important;
+}
+.customCheckbox-input:not(:checked)+.customCheckbox-mask {
+    background-image: none;
+}
+#conversation-view .message .summary .time:after {
+    display: none;
+}
+.scrollbox-container:after, 
+.scrollbox-container:before {
+    background: none;
+}
+}

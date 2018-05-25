@@ -11,6 +11,10 @@
 //The version to be used to determine updating procedures. Do NOT use subverions
 $version: 'v0.2';
 
+//Theme selection, check _colors.scss to view the list of themes
+$theme: 'archon';
+$mode: 'light';
+
 //Determines whether the update indicator should be shown if updates
 // are available
 $showUpdateIndicator: 1;
@@ -25,5 +29,6 @@ $planText: 'Archon';
 @import 'imports/update';
 @import 'imports/header';
 @import 'imports/recolor';
+@import 'imports/body';
 
 @import 'custom';
