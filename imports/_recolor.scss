@@ -44,7 +44,8 @@
 #conversation-view header,
 #conversation-view .message,
 .conversation,
-.scrollbox-container {
+.scrollbox-container,
+.contactList-item-activeCursorContact .customCheckbox-container {
     border-color: $primary !important;
 }
 
