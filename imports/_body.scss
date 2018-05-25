@@ -20,7 +20,7 @@ body #pm_main, .messagePlaceholder,
 .pm_dropdown>button:hover,
 .messageExtra-container>[class*=-container],
 #conversation-view header h1 {
-    color: $body-text !important;
+    color: $body-text;
 }
 
 body #pm_main,
@@ -84,7 +84,7 @@ div.pm_dropdown>button:hover,
 .pm_buttons.disabled>a,
 .pm_buttons.disabled>a .fa.fa-angle-down,
 .pm_buttons .disabled .fa.fa-angle-down {
-    color: $primary-dark !important;
+    color: rgb(128, 128, 128) !important;
 }
 .customCheckbox-input:not(:checked)+.customCheckbox-mask {
     background-image: none;
@@ -95,5 +95,8 @@ div.pm_dropdown>button:hover,
 .scrollbox-container:after, 
 .scrollbox-container:before {
     background: none;
+}
+#conversation-view .message .frame .email {
+    color: initial;
 }
 }
