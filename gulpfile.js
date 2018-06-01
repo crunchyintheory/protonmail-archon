@@ -6,10 +6,12 @@ const rename = require('gulp-rename');
 const fs = require('fs');
 
 gulp.task('sass', function() {
-    var css = gulp.src('./archon.scss')
-        .pipe(sass().on('error', sass.logError));
-    css.pipe(gulp.dest('./dist'));
-    return css.pipe(minify())
+    gulp.src('./archon.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./dist'));
+    return gulp.src('./archon.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(minify())
         .pipe(rename({
             suffix: '.min'
         }))
