@@ -1,0 +1,2 @@
+alias sass='gulp sass'
+alias update='gulp build-update'
