@@ -96,3 +96,6 @@ div[class*=dropdown-folder-] button {
 #pm_settings .settings .row .setting .radio img {
     filter: hue-rotate(320deg);
 }
+[class*=squireToolbar-row] {
+    background-color: rgba($primary, .2);
+}
