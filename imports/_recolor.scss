@@ -24,7 +24,7 @@
 .pm_modal .modal-dialog,
 .customRadio-input:checked+.customRadio-mask,
 .sidebarApp-container .sidebar-btn-compose,
-.pm_button,
+.pm_button:not(.pm_button.link),
 .pm_buttons,
 .pm_buttons a,
 .customMaskInput-mask,
