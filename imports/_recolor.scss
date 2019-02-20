@@ -6,7 +6,8 @@
 .conversationPlaceholder #storageStatus .wrap span strong,
 .squire-popover [class*=-footer] [class*=-btn-],
 .customCheckbox-input:checked+.customCheckbox-mask,
-.conversation.marked:before {
+.conversation.marked:before,
+.navigationUser-newVersion-info {
     background-color: $primary !important;
 }
 
@@ -14,7 +15,8 @@
 .pm_button.primary:focus, 
 .sidebarApp-container .sidebar-btn-compose:hover, 
 .pm_modal .modal-dialog .close, 
-.pm_badge.primary {
+.pm_badge.primary,
+.pm_toggle-checkbox:checked+.pm_toggle-label {
     background-color: $primary-dark !important;
 }
 
@@ -24,7 +26,7 @@
 .pm_modal .modal-dialog,
 .customRadio-input:checked+.customRadio-mask,
 .sidebarApp-container .sidebar-btn-compose,
-.pm_button:not(.pm_button.link),
+.pm_button:not(.pm_button):not(.link),
 .pm_buttons,
 .pm_buttons a,
 .customMaskInput-mask,
@@ -45,7 +47,8 @@
 #conversation-view .message,
 .conversation,
 .scrollbox-container,
-.contactList-item-activeCursorContact .customCheckbox-container {
+.contactList-item-activeCursorContact .customCheckbox-container,
+.navigationUser-newVersion-container {
     border-color: $primary !important;
 }
 
@@ -65,7 +68,8 @@ html.protonmail .text-purple,
 #conversation-view .message .message-contact-sender,
 i.fa.fa-search,
 div[class*=dropdown-label-] button,
-div[class*=dropdown-folder-] button {
+div[class*=dropdown-folder-] button,
+.navigationUser-newVersion-container {
     color: $primary !important;
 }
 
